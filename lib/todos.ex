@@ -23,6 +23,16 @@ defmodule Todos do
     ["todo 1", "todo 2", "todo 3", "todo 4"]
   end
 
+  def complete_todo(tasks, task) do
+    if contains_todo?(tasks, task) do
+      # Task existiert
+      List.delete(tasks, task)
+    else
+      # Task existiert nicht
+      :not_found_error
+    end
+  end
+
   def contains_todo?(tasks, task) do
     Enum.member?(tasks, task)
   end

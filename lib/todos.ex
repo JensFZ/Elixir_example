@@ -14,7 +14,9 @@ defmodule Todos do
 
     {anzahl_der_todos, _} = IO.gets("Anzahl der Todos: ") |> Integer.parse()
 
-    anzahl_der_todos
+    for _ <- 1..anzahl_der_todos do
+      IO.gets("Todo: ") |> String.trim()
+    end
   end
 
   def temp_todos do

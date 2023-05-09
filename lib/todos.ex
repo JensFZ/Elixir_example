@@ -5,6 +5,8 @@ defmodule Todos do
 
     # Integer.parse zerlegt die eingabe in integer und string -> wird gleich den beiden variablen zugewiesen
     {anzahl_der_todos, _rest} = Integer.parse(anzahl_der_todos)
+
+    # ausgabe
     anzahl_der_todos
   end
 end

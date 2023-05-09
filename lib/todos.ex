@@ -14,7 +14,10 @@ defmodule Todos do
 
     {anzahl_der_todos, _} = IO.gets("Anzahl der Todos: ") |> Integer.parse()
 
-    # ausgabe
     anzahl_der_todos
+  end
+
+  def temp_todos do
+    ["todo 1", "todo 2", "todo 3", "todo 4"]
   end
 end

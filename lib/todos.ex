@@ -33,6 +33,14 @@ defmodule Todos do
     end
   end
 
+  def add_new_todo(tasks, task) do
+    if !contains_todo?(tasks, task) do
+      List.insert_at(tasks, -1, task)
+    else
+      :allready_in_list_error
+    end
+  end
+
   def contains_todo?(tasks, task) do
     Enum.member?(tasks, task)
   end

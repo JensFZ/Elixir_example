@@ -20,4 +20,8 @@ defmodule Todos do
   def temp_todos do
     ["todo 1", "todo 2", "todo 3", "todo 4"]
   end
+
+  def contains_todo?(tasks, task) do
+    Enum.member?(tasks, task)
+  end
 end

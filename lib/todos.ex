@@ -24,4 +24,9 @@ defmodule Todos do
   def contains_todo?(tasks, task) do
     Enum.member?(tasks, task)
   end
+
+  def random_todo(tasks) do
+    [todo] = Enum.take_random(tasks, 1)
+    todo
+  end
 end

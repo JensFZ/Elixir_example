@@ -25,6 +25,10 @@ defmodule Todos do
     Enum.member?(tasks, task)
   end
 
+  def keyword_search(tasks, find) do
+    for task <- tasks, String.contains?(task, find), do: task
+  end
+
   def random_todo(tasks) do
     [todo] = Enum.take_random(tasks, 1)
     todo
